@@ -48,8 +48,8 @@ check_n_soils = len_checker(N_SOILS)
 # material boundaries
 MAT_BOUNDS = check_n_soils({
     1: [(-362.0, -69.0), (362.0, -69.0), (362.0, 62.0), (-362.0, 62.0)],
-    2: [(-362.0, -4.7), (362.0, -4.7), (362.0, 62.0), (-362.0, 62.0)],
-    3: [(-158.0, -4.7), (158.0, -4.7), (158.0, 62.0), (-158.0, 62.0)]
+    2: [(-362.0, -4.45), (362.0, -4.45), (362.0, 62.0), (-362.0, 62.0)],
+    3: [(-414.0, -4.45), (414.0, -4.45), (414.0, 62.0), (-414.0, 62.0)]
 })
 # TODO: add visual sanity check for MAT_BOUNDS
 
@@ -58,7 +58,7 @@ N_DL_STEPS = 2
 # anything each element with mat_num in the mat_num_range greater than y_value will be applied current step_num
 DL_STEP_BOUNDS = {
     range(1,2): {1: -69.0},
-    range(1,4): {2: -4.7}
+    range(1,4): {2: -4.45}
 }
 # sanity check_n_structs
 assert sorted({v for d in DL_STEP_BOUNDS.values() for v in d.keys()}) == list(range(1, N_DL_STEPS+1))
