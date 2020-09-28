@@ -89,7 +89,7 @@ if __name__ == "__main__":
     struct = build_struct_and_kept_indexes(show=False)
 
     # define structure/beam element df for each structure
-    struct_elements = list(gen_struct_elements(struct, show=False))
+    struct_elements = list(gen_struct_elements(struct, show=True))
 
     # define soil element dfs: quad and tria
     quad_elements = pd.DataFrame(index=msh_quad_df.index, columns=ELEMENT_COLUMNS)
